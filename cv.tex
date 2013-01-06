@@ -1,0 +1,155 @@
+\documentclass[11pt,letter]{moderncv}
+
+% moderncv themes
+\moderncvtheme[blue]{casual}                  % optional argument are 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.84]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% Hyperlinks
+%\usepackage{hyperref}								% to use hyperlinks
+%\definecolor{linkcolour}{rgb}{0,0.2,0.6}			% hyperlinks setup
+%\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+% personal data
+\firstname{Benjamin}
+\familyname{Morris}
+\title{Curriculum Vitae}
+\address{328 Wilson Hall, University of North Carolina}{Chapel Hill, NC 27599}
+\phone{919 951 9529}
+\email{ben@bendmorris.com}
+\homepage{http://www.bendmorris.com | https://github.com/bendmorris}
+
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+
+\section{Education}
+\cventry{(in progress)}{Ph.D. Biology}{University of North Carolina}{}{}{Advisor: Allen Hurlbert}
+\cventry{2012}{B.S. Computational Biology}{Utah State University}{}{} {Advisor: Ethan White}
+
+
+\section{Experience}
+\cventry{2012-present}{Research Assistant}{National Evolutionary Synthesis Center}{}{}
+{Developed infrastructure and web service for storing, querying, pruning and grafting of phylogenetic trees and metadata. Participant in 2013 Phylotastic hackathon.}
+\cventry{2012}{Software Developer}{National Ecological Observatory Network}{}{}
+{Designed and implemented a database and automated workflow to collect, store and query data on existing species at NEON sites.}
+\cventry{2011-2012}{Climate Data Analyst}{Utah Climate Center}{}{}
+{Acquired and analyzed large climate datasets such as CMIP5, and worked on applied climate change projects in Nepal and Taiwan.}
+\cventry{2010-2012}{Research Assistant}{Prof. Ethan White's lab}{}{}{Developed the EcoData Retriever for acquiring and manipulating ecological data, and pursued individual research projects in macroecology.}
+\cventry{2009-2010}{Web Developer}{Utah Water Research Lab}{}{}
+{Developed community outreach software including greatsaltlakeinfo.org and bearriverinfo.org. Responsible for components of the CUAHSI HydroServer scientific software suite.}
+
+
+\section{Research}
+\cvline{}
+{I'm broadly interested in community ecology, macroecology, and ecoinformatics. My research explores the processes that structure ecological communities, and employs large, diverse ecological datasets to understand ecology at broad scales.}
+
+
+\subsection{Publications}
+\cvline{2013} {
+    Messina, F.J., \emph{B.D. Morris}, and C.W. Fox. Effect of inbreeding on host discrimination and other fitness components in a seed beetle. Annals of the Entomological Society of America. (in press)
+}
+\cvline{2012} {
+    \emph{Benjamin D. Morris} and Ethan P. White. The EcoData Retriever: improving access to existing ecological data. PLoS ONE. (in review)
+}
+\cvline{} {
+    \emph{Benjamin D. Morris} and S.K. Morgan Ernest. Metabolic and environmental constraints on animal space use. (in prep)
+}
+
+
+\subsection{Poster presentations}
+\cvline{2012} {
+    \emph{Benjamin D. Morris} and S.K. Morgan Ernest. Metabolic rate and animal space use. Gordon Research Conference: Metabolic Basis of Ecology and Evolution in a Changing World. Biddeford, ME.
+}
+\cvline{} {
+    \emph{Benjamin D. Morris} and Ethan P. White. Patterns of species richness in human infectious diseases. National Conference on Undergraduate Research. Ogden, UT.
+}
+\cvline{2011} {
+    Ethan P. White, \emph{Benjamin D. Morris}, S.K. Morgan Ernest, Katherine M. Thibault, Allen H. Hurlbert, Andrew J. Kerkhoff and Zachary T. Brym. EcologicalData.org: Tools for finding and using ecological data. Ecological Society of America. Austin, TX.
+}
+\cvline{2010} {
+    \emph{Benjamin D. Morris} and Ethan P. White. The EcoData Retriever: improving access to ecological data. USU Department of Biology Undergraduate Research Symposium. Logan, UT.
+}
+
+
+\subsection{Software}
+\cvline{Python} {
+    Phylotastic treestore: developer. Web service for storing and querying phylogenetic trees in RDF.
+    <http://www.evoio.org/wiki/Phylotastic/Datastore>
+}
+\cvline{} {
+    EcoData Retriever: lead developer. Tool for acquiring and managing ecological datasets.
+    <http://www.ecologicaldata.org/ecodata-retriever>
+}
+\cvline{C\#} {
+    CUAHSI HydroServer: developer. Web-based software suite for visualizing and manipulating environmental databases, using ASP.NET and ArcGIS Server.
+    <http://hydroserver.codeplex.com/>, <http://icewater.usu.edu/>
+}
+\cvline{other} {
+    See <https://github.com/bendmorris> for more open source software development.
+}
+
+
+\section{Awards}
+\cvline{2011} {NSF Research Experiences for Undergraduates}
+\cvline{2006} {Utah State University Presidential Scholarship}
+
+
+\section{Skills}
+\cvline{Programming}{\small Python, Haskell, Java, R, C\#, Visual Basic, C, C++, Smalltalk}
+\cvline{Web}{\small XHTML, XML, JavaScript, jQuery, AJAX, RDF}
+\cvline{Databases}{\small MySQL, PostgreSQL, sqlite, MS SQL Server, Virtuoso, MS Access}
+\cvline{Tools}{\small GrADS}
+
+
+\section{Teaching}
+\cvline{UNC}{
+    Intro to Biology (lab). Fall 2012.
+}
+\cvline{USU}{
+    Climate and Climate Change. Spring 2012.
+    \newline
+    Advanced Programming for Biologists. Fall 2011.
+}
+\cvline{other}{
+    Software Carpentry scientific programming workshops: 
+    \newline USU, UNC, NESCent, and UVA.
+}
+
+
+\section{References}
+\cvline{}{
+Ethan White, Associate Professor, Utah State University
+\newline ethan.white@usu.edu
+}
+\cvline{}{
+Morgan Ernest, Associate Professor, Utah State University
+\newline morgan.ernest@usu.edu
+}
+\cvline{}{
+Allen Hurlbert, Assistant Professor, University of North Carolina
+\newline hurlbert@bio.unc.edu
+}
+
+\end{document}
