@@ -1,26 +1,31 @@
 \documentclass[11pt,letter]{moderncv}
 
+
 % optional argument are 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-\moderncvtheme[blue]{casual}
+\moderncvtheme[blue]{classic}
 
 \usepackage[utf8]{inputenc}
 
 % adjust the page margins
-\usepackage[scale=0.84]{geometry}
+\usepackage[scale=0.8]{geometry}
 
 % Hyperlinks
-%\usepackage{hyperref}								% to use hyperlinks
-%\definecolor{linkcolour}{rgb}{0,0.2,0.6}			% hyperlinks setup
-%\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+%\usepackage{hyperref}
+
+\AfterPreamble{
+    \definecolor{linkcolour}{rgb}{0,0.2,0.6}
+    \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+}
+
 
 % personal data
 \firstname{Benjamin}
 \familyname{Morris}
 \title{Curriculum Vitae}
 \address{328 Wilson Hall, University of North Carolina}{Chapel Hill, NC 27599}
-\phone{919 951 9529}
 \email{ben@bendmorris.com}
-\homepage{http://www.bendmorris.com | https://github.com/bendmorris}
+\homepage{http://www.bendmorris.com}
+
 
 \begin{document}
 \maketitle
@@ -33,30 +38,45 @@
 
 \section{Experience}
 \cventry{2012-present}{Research Assistant}{National Evolutionary Synthesis Center}{}{}
-{Developed infrastructure and web service for storing, querying, pruning and grafting of phylogenetic trees and metadata. Participant in 2013 Phylotastic hackathon.}
+{Software/web development for phylogeny reuse. Participant in 2013 Phylotastic hackathon.}
+
 \cventry{2012}{Software Developer}{National Ecological Observatory Network}{}{}
-{Designed and implemented a database and automated workflow to collect, store and query data on existing species at NEON sites.}
+{Designed and implemented database and automated data entry workflow for NEON sites.}
+
 \cventry{2011-2012}{Climate Data Analyst}{Utah Climate Center}{}{}
-{Acquired and analyzed large climate datasets such as CMIP5, and worked on applied climate change projects in Nepal and Taiwan.}
-\cventry{2010-2012}{Research Assistant}{Prof. Ethan White's lab}{}{}{Developed the EcoData Retriever for acquiring and manipulating ecological data, and pursued individual research projects in macroecology.}
+{Computational support for data acquisition and applied climate change research.}
+
+\cventry{2010-2012}{Research Assistant}{Prof. Ethan White's lab}{}{}
+{Developed the EcoData Retriever and pursued individual research projects in macroecology.}
+
 \cventry{2009-2010}{Web Developer}{Utah Water Research Lab}{}{}
-{Developed community outreach software including greatsaltlakeinfo.org and bearriverinfo.org. Responsible for components of the CUAHSI HydroServer scientific software suite.}
+{Development of community web portals (\url{greatsaltlakeinfo.org}, \url{bearriverinfo.org}) 
+and data sharing infrastructure.}
 
 
 \section{Research}
 \cvline{}
-{I'm broadly interested in community ecology, macroecology, and ecoinformatics. My research explores the processes that structure ecological communities, and employs large, diverse ecological datasets to understand ecology at broad scales.}
+{I'm broadly interested in macroecology, community ecology, and informatics.}
 
 
 \subsection{Publications}
 \cvline{2013} {
-    Messina, F.J., \emph{B.D. Morris}, and C.W. Fox. Effect of inbreeding on host discrimination and other fitness components in a seed beetle. Annals of the Entomological Society of America. (in press)
+    Messina, F.J., \emph{B.D. Morris}, and C.W. Fox. Effect of inbreeding on host discrimination and other 
+fitness components in a seed beetle. Annals of the Entomological Society of America 106(1): 128-135 (2013); 
+DOI: http://dx.doi.org/10.1603/AN12103
 }
 \cvline{} {
     \emph{Benjamin D. Morris} and Ethan P. White. The EcoData Retriever: improving access to existing ecological data. PLoS ONE. (in review)
 }
 \cvline{} {
     \emph{Benjamin D. Morris} and S.K. Morgan Ernest. Metabolic and environmental constraints on animal space use. (in prep)
+}
+
+
+\subsection{Oral presentations}
+\cvline{2013} {
+    \emph{Benjamin D. Morris}. Sharing makes science better: the EcoData Retriever. Annual meeting of the 
+Ecological Society of America. Minneapolis, MN.
 }
 
 
@@ -71,26 +91,25 @@
     Ethan P. White, \emph{Benjamin D. Morris}, S.K. Morgan Ernest, Katherine M. Thibault, Allen H. Hurlbert, Andrew J. Kerkhoff and Zachary T. Brym. EcologicalData.org: Tools for finding and using ecological data. Ecological Society of America. Austin, TX.
 }
 \cvline{2010} {
-    \emph{Benjamin D. Morris} and Ethan P. White. The EcoData Retriever: improving access to ecological data. USU Department of Biology Undergraduate Research Symposium. Logan, UT.
+    \emph{Benjamin D. Morris} and Ethan P. White. The EcoData Retriever: improving access to ecological data. USU Undergraduate Research Symposium. Logan, UT.
 }
 
 
 \subsection{Software}
 \cvline{Python} {
-    Phylotastic treestore. Converts phylogenetic trees into RDF/CDAO representation which can be efficiently
-    queried and annotated.
-    \newline <http://www.evoio.org/wiki/Phylotastic/Datastore>
+    PhyloFile. Community edited, annotated collection RDF store for phylogenetic trees.
+    \newline \url{http://phylofile.nescent.org}
 }
 \cvline{} {
     EcoData Retriever. Tool for acquiring and managing ecological datasets.
-    \newline <http://www.ecologicaldata.org/ecodata-retriever>
+    \newline \url{http://www.ecologicaldata.org/ecodata-retriever}
 }
 \cvline{C\#} {
     CUAHSI HydroServer. Web-based software suite for visualizing and manipulating environmental databases, using ASP.NET and ArcGIS Server.
-    \newline <http://hydroserver.codeplex.com/>, <http://icewater.usu.edu/>
+    \newline \url{http://hydroserver.codeplex.com/}, \url{http://icewater.usu.edu/}
 }
 \cvline{other} {
-    See <https://github.com/bendmorris> for more open source software development.
+    See \url{https://github.com/bendmorris} for more open source software development.
 }
 
 
@@ -100,10 +119,14 @@
 
 
 \section{Skills}
-\cvline{Programming}{Python, Haskell, Java, R, C\#, Visual Basic, C, C++}
-\cvline{Web}{XHTML, XML, JavaScript, jQuery, AJAX, RDF}
-\cvline{Informatics}{Relational databases (SQL), Triple stores (SPARQL)}
-\cvline{Tools}{GrADS}
+\cvline{Programming}{
+    Python, Haskell, Java, C\#, Visual Basic (advanced)
+    \newline
+    JavaScript, R, C, C++, perl, awk (proficient)
+}
+\cvline{Web}{
+    XHTML, XML, jQuery, AJAX, RDF, SQL, SPARQL
+}
 
 
 \section{Teaching}
@@ -117,22 +140,30 @@
 }
 \cvline{other}{
     Software Carpentry scientific programming workshops: 
-    \newline USU, UNC, NESCent, Duke, and UVA.
+    \newline USU, UNC, UVA, NESCent, and Duke.
+}
+
+
+\section{Professional Societies}
+\cvline{}{
+    Ecological Society of America
+    \newline
 }
 
 
 \section{References}
 \cvline{}{
-Ethan White, Associate Professor, Utah State University
-\newline ethan.white@usu.edu
-}
-\cvline{}{
-Morgan Ernest, Associate Professor, Utah State University
-\newline morgan.ernest@usu.edu
-}
-\cvline{}{
-Allen Hurlbert, Assistant Professor, University of North Carolina
-\newline hurlbert@bio.unc.edu
+\begin{tabular}{ l@{\hskip 0.5cm} l }
+    Ethan White, Associate Professor, USU & 
+    \href{mailto:ethan.white@usu.edu}{ethan.white@usu.edu} \\
+    Morgan Ernest, Associate Professor, USU & 
+    \href{mailto:morgan.ernest@usu.edu}{morgan.ernest@usu.edu} \\
+    Allen Hurlbert, Assistant Professor, UNC & 
+    \href{mailto:hurlbert@bio.unc.edu}{hurlbert@bio.unc.edu} \\
+    Hilmar Lapp, Asst. Director for Informatics, NESCent & 
+    \href{mailto:hlapp@nescent.org}{hlapp@nescent.org}
+\\
+\end{tabular}
 }
 
 \end{document}
